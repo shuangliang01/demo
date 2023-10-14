@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+<!--引用命名空间-->
 <html xmlns:th="http://www.thymeleaf.org">
 
 <body>
@@ -30,11 +31,11 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="/profile/questions">我的问题</a></li>
+                            <li><a href="#">个人资料</a></li>
                             <li><a href="/logout">退出登录</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li th:if="${session.user == null}">
                         <a href="https://github.com/login/oauth/authorize?client_id=acf6f765546fe9a917bc&redirect_uri=http://localhost:8080/callback&scope=user&state=1">登录</a>
                         <!--                        <a th:href="@{https://github.com/login/oauth/authorize(client_id='7f316909bf70d1eaa2b2',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('redirectUri')},scope='user',state=1)}">登录</a>-->
 <!--                        <a href="#" data-toggle="modal" data-target="#myModal">登录</a>-->
