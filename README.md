@@ -1,5 +1,8 @@
 # Getting Started
 
+mvn flyway:migrate
+
+
 ### Reference Documentation
 
 For further reference, please consider the following sections:
