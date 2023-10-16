@@ -1,6 +1,8 @@
 # Getting Started
 
+```bash
 mvn flyway:migrate
+```
 
 
 ### Reference Documentation
