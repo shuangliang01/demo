@@ -1,4 +1,5 @@
 # Getting Started
+a platform built with Spring + Bootstrap.
 
 ```bash
 mvn flyway:migrate
