@@ -33,8 +33,10 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <h5 class="media-heading"></h5>
-                    <span class="text-desc"><span th:text="${question.title}"></span> 个回复 • <span
+                    <h5 class="media-heading">
+                        <a th:href="@{'/question/'+ ${question.id}}" th:text="${question.title}"></a>
+                    </h5>
+                    <span class="text-desc"><span th:text="${question.commentCount}"></span> 个回复 • <span
                             th:text="${question.viewCount}"></span> 次浏览 • <span
                             th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></span></span>
                 </div>
