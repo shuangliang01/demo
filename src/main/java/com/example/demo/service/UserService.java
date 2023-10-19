@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.example.demo.exception.CustomizeException;
 import com.example.demo.mapper.UserMapper;
 import com.example.demo.model.User;
 import com.example.demo.model.UserExample;
@@ -33,7 +34,10 @@ public class UserService {
             UserExample example = new UserExample();
             example.createCriteria()
                     .andIdEqualTo(dbUser.getId());
-            userMapper.updateByExampleSelective(updateUser, example);
+            int updated = userMapper.updateByExampleSelective(updateUser, example);
+            if (updated != 1) {
+                throw new CustomizeException("Question not exist");
+            }
         }
     }
 }
