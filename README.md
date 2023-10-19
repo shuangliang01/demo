@@ -3,6 +3,7 @@ a platform built with Spring + Bootstrap.
 
 ```bash
 mvn flyway:migrate
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
 
 
