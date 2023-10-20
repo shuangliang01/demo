@@ -34,10 +34,7 @@ public class UserService {
             UserExample example = new UserExample();
             example.createCriteria()
                     .andIdEqualTo(dbUser.getId());
-            int updated = userMapper.updateByExampleSelective(updateUser, example);
-            if (updated != 1) {
-                throw new CustomizeException("Question not exist");
-            }
+            userMapper.updateByExampleSelective(updateUser, example);
         }
     }
 }

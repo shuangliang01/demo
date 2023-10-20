@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.QuestionExtMapper">
   <resultMap id="BaseResultMap" type="com.example.demo.model.Question">
-    <id column="ID" jdbcType="INTEGER" property="id" />
+    <id column="ID" jdbcType="BIGINT" property="id" />
     <result column="TITLE" jdbcType="VARCHAR" property="title" />
     <result column="DESCRIPTION" jdbcType="VARCHAR" property="description" />
     <result column="GMT_CREATE" jdbcType="BIGINT" property="gmtCreate" />
@@ -17,6 +17,11 @@
   <update id="incView" parameterType="com.example.demo.model.Question">
     update QUESTION
     set VIEW_COUNT = VIEW_COUNT + #{viewCount,jdbcType=INTEGER}
+    where id = #{id}
+  </update>
+  <update id="incCommentCount" parameterType="com.example.demo.model.Question">
+    update QUESTION
+    set COMMENT_COUNT = COMMENT_COUNT + #{commentCount,jdbcType=INTEGER}
     where id = #{id}
   </update>
 </mapper>
