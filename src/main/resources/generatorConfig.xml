@@ -39,5 +39,8 @@
         <table tableName="comment" domainObjectName="Comment">
             <generatedKey column="id" sqlStatement="JDBC" identity="true" />
         </table>
+        <table tableName="notification" domainObjectName="Notification">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
+        </table>
     </context>
 </generatorConfiguration>

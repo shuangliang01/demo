@@ -2,12 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title th:text="${sectionName}"></title>
-<!--    <head th:insert="~{import :: head}"></head>-->
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/css/demo.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+    <head th:insert="~{import :: head}"></head>
 </head>
 <body>
 <div th:insert="~{navigation :: nav}"></div>
@@ -94,7 +89,7 @@
                 <a href="/profile/replies"
                    th:class="${section == 'replies'}? 'active list-group-item' : 'list-group-item'">
                     最新回复
-                    <span class="badge"></span>
+                    <span class="badge" th:text="${session.unreadCount}"></span>
                 </a>
             </div>
         </div>

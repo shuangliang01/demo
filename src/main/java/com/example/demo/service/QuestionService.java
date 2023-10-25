@@ -35,7 +35,9 @@ public class QuestionService {
     private UserMapper userMapper;
 
     public PaginationDTO list(Integer page, Integer size) {
+
         PaginationDTO paginationDTO = new PaginationDTO();
+
         Integer totalPage;
 
         Integer totalCount = (int) questionMapper.countByExample(new QuestionExample());
@@ -72,6 +74,9 @@ public class QuestionService {
         return paginationDTO;
     }
 
+
+
+
     public PaginationDTO list(Long userId, Integer page, Integer size) {
         PaginationDTO paginationDTO = new PaginationDTO();
 
@@ -103,6 +108,7 @@ public class QuestionService {
                 .andCreatorEqualTo(userId);
         List<Question> questions = questionMapper.selectByExampleWithRowbounds(example, new RowBounds(offset, size));
         List<QuestionDTO> questionDTOList = new ArrayList<>();
+
         for (Question question : questions) {
             User user = userMapper.selectByPrimaryKey(question.getCreator());
             QuestionDTO questionDTO = new QuestionDTO();
