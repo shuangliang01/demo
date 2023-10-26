@@ -31,8 +31,8 @@
                     <h5 class="media-heading">
                         <a th:href="@{'/question/'+ ${question.id}}" th:text="${question.title}"></a>
                     </h5>
-                    <span class="text-desc"><span th:text="${question.commentCount}"></span> 个回复 • <span
-                            th:text="${question.viewCount}"></span> 次浏览 • <span
+                    <span class="text-desc"><span th:text="${question.commentCount}"></span> reply • <span
+                            th:text="${question.viewCount}"></span> view • <span
                             th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></span></span>
                 </div>
             </div>
@@ -68,7 +68,7 @@
             </nav>
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <h4>热门标签</h4>
+            <h4>HOT</h4>
         </div>
     </div>
 </div>
