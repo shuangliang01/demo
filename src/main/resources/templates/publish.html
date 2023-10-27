@@ -11,20 +11,20 @@
 <div class="container-fluid main">
     <div class="row">
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-            <h2><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 发起</h2>
+            <h2><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Publish</h2>
             <hr>
 
             <form action="/publish" method="post">
 <!--                需要取值但不在页面展示-->
                 <input type="hidden" name="id" th:value="${id}">
                 <div class="form-group">
-                    <label for="title">Question Title:</label>
+                    <label for="title">Title:</label>
                     <input type="text" class="form-control" th:value="${title}" id="title" name="title"
                            placeholder="Question Title..."
                            autocomplete="off">
                 </div>
                 <div class="form-group" id="question-editor" style="z-index: 2">
-                    <label for="description">Question Description (请参照右侧提示):</label>
+                    <label for="description">Topic Description:</label>
                     <textarea name="description" id="description" th:text="${description}"
                               class="form-control"
                               cols="30"
@@ -50,7 +50,7 @@
                     <label for="tag">Add Tag:</label>
                     <input type="text" class="form-control" th:value="${tag}" id="tag" name="tag"
                            autocomplete="off"
-                           placeholder="输入标签，以，号分隔"
+                           placeholder="input tags, separate with comma"
                            onclick="showSelectTag()">
                     <div id="select-tag" class="publish-tag-tab">
                         <ul class="nav nav-tabs" role="tablist">

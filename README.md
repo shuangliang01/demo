@@ -1,6 +1,17 @@
 # Getting Started
 a platform built with Spring + Bootstrap.
 
+## Deploy
+- Git
+- JDK
+- Maven
+- MySQL
+
+## Step
+- yum install maven
+- mvn -v
+- mvn compile package
+
 ```bash
 mvn flyway:migrate
 mvn -D mybatis.generator.overwrite=true mybatis-generator:generate

@@ -28,7 +28,7 @@ public class ProfileController {
                           @PathVariable(name = "action") String action,
                           Model model,
                           @RequestParam(name = "page", defaultValue = "1") Integer page,
-                          @RequestParam(name = "size", defaultValue = "5") Integer size) {
+                          @RequestParam(name = "size", defaultValue = "6") Integer size) {
 
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
@@ -37,7 +37,7 @@ public class ProfileController {
 
         if("questions".equals(action)) {
             model.addAttribute("section","questions");
-            model.addAttribute("sectionName","我的提问");
+            model.addAttribute("sectionName","My Post");
             PaginationDTO paginationDTO = questionService.list(user.getId(), page, size);
             model.addAttribute("pagination", paginationDTO);
         } else if ("replies".equals(action)) {
@@ -45,7 +45,7 @@ public class ProfileController {
             Long unreadCount = notificationService.unreadCount(user.getId());
             model.addAttribute("section", "replies");
             model.addAttribute("pagination", paginationDTO);
-            model.addAttribute("sectionName", "最新回复");
+            model.addAttribute("sectionName", "New Reply");
         }
         return "profile";
     }
