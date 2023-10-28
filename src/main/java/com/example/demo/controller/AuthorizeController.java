@@ -1,8 +1,7 @@
 package com.example.demo.controller;
-
 import com.example.demo.dto.AccessTokenDTO;
 import com.example.demo.dto.GithubUser;
-import com.example.demo.mapper.UserMapper;
+
 import com.example.demo.model.User;
 import com.example.demo.provider.GithubProvider;
 import com.example.demo.service.UserService;
@@ -24,14 +23,6 @@ public class AuthorizeController {
 
     @Autowired
     private GithubProvider githubProvider;
-    @Value("${github.client.id}")
-    private String clientId;
-
-    @Value("${github.client.secret}")
-    private String clientSecret;
-
-    @Value("${github.redirect.uri}")
-    private String redirectUri;
 
     @Autowired
     private UserService userService;
@@ -41,10 +32,7 @@ public class AuthorizeController {
                            @RequestParam(name="state") String state,
                            HttpServletResponse response) {
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
-        accessTokenDTO.setClient_id(clientId);
-        accessTokenDTO.setClient_secret(clientSecret);
         accessTokenDTO.setCode(code);
-        accessTokenDTO.setRedirect_uri(redirectUri);
         accessTokenDTO.setState(state);
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser = githubProvider.getUser(accessToken);

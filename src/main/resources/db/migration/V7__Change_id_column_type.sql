@@ -1,3 +1,3 @@
-ALTER TABLE COMMENT ALTER COLUMN ID BIGINT DEFAULT NOT NULL;
-ALTER TABLE QUESTION ALTER COLUMN ID BIGINT DEFAULT NOT NULL;
-ALTER TABLE TEST ALTER COLUMN ID BIGINT DEFAULT NOT NULL;
+alter table comment alter column id bigint default not null;
+alter table question alter column id bigint default not null;
+alter table test alter column id bigint default not null;

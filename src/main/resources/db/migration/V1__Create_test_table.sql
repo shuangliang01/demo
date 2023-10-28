@@ -1,9 +1,9 @@
-create table TEST
+create table test
 (
-    ID INTEGER auto_increment primary key,
-    NAME         CHARACTER VARYING(50),
-    ACCOUNT_ID   CHARACTER VARYING(100),
-    TOKEN        CHARACTER(36),
-    GMT_CREATE   BIGINT,
-    GMT_MODIFIED BIGINT
+    id integer auto_increment primary key,
+    name         character varying(50),
+    account_id   character varying(100),
+    token        character(36),
+    gmt_create   bigint,
+    gmt_modified bigint
 );

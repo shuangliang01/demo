@@ -1,1 +1,1 @@
-ALTER TABLE TEST ADD bio VARCHAR(256) NULL;
+alter table test add bio varchar(256) null;

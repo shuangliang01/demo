@@ -27,6 +27,7 @@ public class SessionInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //获取user，对所有请求做拦截后把user放入请求
         Cookie[] cookies = request.getCookies();
+        request.getSession().setAttribute("redirectUri", request.getServletContext().getAttribute("redirectUri"));
         if (cookies != null && cookies.length != 0)
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals("token")) {

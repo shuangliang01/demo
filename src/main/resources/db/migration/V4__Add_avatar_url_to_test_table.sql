@@ -1,1 +1,1 @@
-ALTER TABLE TEST ADD avatar_url VARCHAR(100) NULL;
+alter table test add avatar_url varchar(100) null;
