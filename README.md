@@ -1,5 +1,5 @@
 # Getting Started
-A platform built with Spring + Bootstrap, offering features such as posting, replying, notification, and updating hot topics. Visit website at:
+A platform built with Spring + Bootstrap, deploy to AWS EC2. The platform offer features such as posting, replying, editing, notification, keyword searching, showing related topic, and updating hot topics in couple hours. Visit website at:
 
 [Link](http://54.209.126.162)
 
