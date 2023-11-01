@@ -1,8 +1,9 @@
 # Getting Started
-A platform built using Spring + Bootstrap, offering features such as posting, replying, notification, and updating hot topics. Visit website at:
-```
-http://54.209.126.162/
-```
+A platform built with Spring + Bootstrap, offering features such as posting, replying, notification, and updating hot topics. Visit website at:
+
+[Link](http://54.209.126.162)
+
+Please login with github account.
 
 
 ## Run in Local Guides
