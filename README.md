@@ -48,3 +48,10 @@ java -jar target/demo-0.0.1-SNAPSHOT.jar
 - vim src/main/resources/application-production.properties
 - mvn package
 - java -jar -Dspring.profiles.active=production target/demo-0.0.1-SNAPSHOT.jar
+- sudo nohup java -jar -Dspring.profiles.active=production target/demo-0.0.1-SNAPSHOT.jar
+### stop
+find pid
+- cat nohup.out
+
+kill process
+- kill -0 pid
