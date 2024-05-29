@@ -1,7 +1,7 @@
 # Getting Started
 A platform built with Spring + Bootstrap, deploy to AWS EC2. The platform offer features such as posting, replying, editing, notification, keyword searching, showing related topic, and updating hot topics in couple hours. Visit website at:
 
-[Link](http://54.209.126.162)
+[Link](http://107.22.218.98/)
 
 Please login with github account.
 
